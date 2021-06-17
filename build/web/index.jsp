@@ -16,6 +16,33 @@
 
     <title>SIPRESS</title>
   </head>
+  
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <img src="images/logo1.jpg " class="navbar-bran">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="http://localhost:8080/pbootstrap/contacto.jsp">Contactenos</a>
+                </li>
+              </ul>
+              <form class="d-flex"> 
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+  
+  
 
   <body>
 
@@ -51,7 +78,7 @@
       <div class="container">
           <div class="row justify-content-center pt-5 mt-5 mr-1">
               <div class="col-md-4 login">
-                  <form action="Controlador" method="get">
+                  <form action="controller">
                       <div class="form-group text-center">
                           <h1 class="text-light">INICIAR SESIÓN</h1>
                       </div>
@@ -72,6 +99,8 @@
                           <span><a  href="#openModal" class="olvide1">Registrarse</a></span>
                       </div>
                       </div>
+               </div>
+          </div>
                     <div id="openModal" class="modalDialog">
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
@@ -158,41 +187,11 @@
                   </script>
                     </div>
                     </div>
-                  </form>
-              </div>
-          </div>
-      
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <div class="container-fluid">
-            <img src="" class="navbar-bran">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Sobre Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Biografia </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Ingresar</a>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            </div>
-          </div>
-        </nav>
-      </header>
+      </
 
-
+             
       
-  </body>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -201,5 +200,6 @@
     <!-- Option 2: Separate Popper and Bootstrap JS -->
    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="./js/bootstrap.min.js"></script>    
+    <script src="./js/bootstrap.min.js"></script> 
+    </body>
 </html>

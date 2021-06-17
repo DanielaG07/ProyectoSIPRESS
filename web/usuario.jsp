@@ -30,18 +30,22 @@
               </div>
           </div>
           <div class="w-100">
-              
               <nav class="navbar navbar-dark bg-dark border-bottom">
+                  <button type="button" class="btn btn-primary">
+                        Notifications <span class="badge bg-secondary">4</span>
+                  </button>
                   <a style="color:white" ><span></span></a>
                   <div class="dropdown">
-                      <a style="color: white" href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cerrar Sesion</a>
-                      <div class="dropdown-menu text-center">
-                          <a><img src="images/dani.jpeg" height="80" width="80"></a><br>
-                          <a>${correo}</a>
-                          <div class="dropdown-divider"></div>
-                          <a  href="Controlador?accion=Salir" class="dropdown-item" >Salir</a>
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          DANIELA GUTIERREZ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="index.jsp">Salir</a></li>
+                        </ul>
                       </div>
-                  </div>
+                
               </nav>
           <!--    <nav class="navbar navbar-dark navbar-light bg-light border-bottom ">
                   <div class="container">
@@ -83,7 +87,7 @@
                               </div>
                               <div class="col-lg-3 d-flex">
                                   <button class="btn btn-primary w-100 align-self-center">Descargar reporte</button>
-                                  
+                                    
                               </div>
                           </div>
                       </div>
@@ -102,14 +106,14 @@
                                       </div>
                                       <div class="col-lg-3 d-flex stat my-3">
                                           <div class="mx-auto">
-                                              <a href="#"><h6 class="text-muted">Tareas activas</h6></a> 
+                                              <a href="http://localhost:8080/pbootstrap/actividades.jsp"><h6 class="text-muted">Tareas activas</h6></a> 
                                             <h3 class="font-weight-bold">$50.000</h3>
                                             <h6 class="text-success">50.50%</h6>
                                           </div>
                                       </div>
                                       <div class="col-lg-3 d-flex stat my-3">
                                           <div class="mx-auto">
-                                              <a href="#"><h6 class="text-muted">Numero de usuarios</h6></a> 
+                                              <a href="#"><h6 class="text-muted">Usuarios Activos</h6></a> 
                                             <h3 class="font-weight-bold">$50.000</h3>
                                             <h6 class="text-success">50.50%</h6>
                                           </div>
@@ -129,6 +133,29 @@
                           
                       </div>
                   </section>
+                                  <section class="bg-grey">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-lg-8 my-3">
+                                                  <div class="card rounded-0">
+                                                      <div class="card-header bg-light">
+                                                          <h6 class="font-weight-bold mb-0">Numero de Aprendices registrados</h6>
+                                                      </div>
+                                                      <div class="card-body">
+                                                          <canvas id="myChart"></canvas>
+                                                      </div>
+                                                      
+                                                  </div>
+                                              </div>
+                                              <div class="col-lg-4 my-3" >
+                                                   
+                                              </div>
+                                              
+                                          </div>
+                                             
+                                          
+                                      </div>
+                                  </section>
                   
               </div>
           </div>
@@ -145,6 +172,23 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
-   
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" crossorigin="anonymous"></script>
+  
+          <script>
+              var ctx = document.getElementById('myChart').getContext('2d');
+              var Chart = new Chart(ctx, {
+                  type: 'line',
+                  data: {
+                      lebels: ['Jenuary', '', '', 'February', 'March', 'April', 'May', 'June'. 'July'],
+                      datasets:[{
+                              lebel: 'my firts datasets',
+                              backgroundColor: 'rgb(255, 99, 123)',
+                              borderColor: 'rgb(255, 99, 123)',
+                              data: [0, 10, 5, 2, 2o, 30, 45]
+                      }]
+                  },
+                  options:{}
+              });
+         </script>
   </body>
 </html>
