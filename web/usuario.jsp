@@ -22,26 +22,23 @@
                   <h4 class="text-light font-weight-bold">SIPRESS</h4>
               </div>
               <div class="menu">
-                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-apps mr-2 lead"></i>Tablero</a> 
-                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-people mr-2 lead"></i>Usuarios</a>
+                  <a href="http://localhost:8080/pbootstrap/actividades.jsp" class="d-block text-light p-3"><i class="icon ion-md-apps mr-2 lead"></i>Tareas activas</a> 
+                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-people mr-2 lead"></i>Usuarios Activos</a>
                   <a href="#" class="d-block text-light p-3"><i class="icon ion-md-stats mr-2 lead"></i>Estadisticas</a>
-                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-person mr-2 lead"></i>Perfil</a>
-                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-settings mr-2 lead"></i>Configuración</a>
+                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-calendar mr-2 lead"></i>Calendario</a>
+                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-settings mr-2 lead"></i>Configuración de cuenta</a>
               </div>
           </div>
           <div class="w-100">
               <nav class="navbar navbar-dark bg-dark border-bottom">
-                  <button type="button" class="btn btn-primary">
-                        Notifications <span class="badge bg-secondary">4</span>
-                  </button>
+                 
                   <a style="color:white" ><span></span></a>
                   <div class="dropdown">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                           DANIELA GUTIERREZ
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="index.jsp">Calendario</a></li
                           <li><a class="dropdown-item" href="index.jsp">Salir</a></li>
                         </ul>
                       </div>
@@ -97,34 +94,9 @@
                           <div class="card rounded-0">
                               <div class="card-body">
                                   <div class="row">
-                                      <div class="col-lg-3 d-flex stat my-3">
-                                          <div class="mx-auto">
-                                              <a href="#"><h6 class="text-muted">Procesos culminados</h6></a>
-                                              <h3 class="font-weight-bold">$50.000</h3>
-                                            <h6 class="text-success">50.50%</h6>
-                                          </div>  
-                                      </div>
-                                      <div class="col-lg-3 d-flex stat my-3">
-                                          <div class="mx-auto">
-                                              <a href="http://localhost:8080/pbootstrap/actividades.jsp"><h6 class="text-muted">Tareas activas</h6></a> 
-                                            <h3 class="font-weight-bold">$50.000</h3>
-                                            <h6 class="text-success">50.50%</h6>
-                                          </div>
-                                      </div>
-                                      <div class="col-lg-3 d-flex stat my-3">
-                                          <div class="mx-auto">
-                                              <a href="#"><h6 class="text-muted">Usuarios Activos</h6></a> 
-                                            <h3 class="font-weight-bold">$50.000</h3>
-                                            <h6 class="text-success">50.50%</h6>
-                                          </div>
-                                      </div>
-                                      <div class="col-lg-3 d-flex my-3">
-                                          <div class="mx-auto">
-                                              <a href="#" ><h6 class="text-muted">Usuarios nuevos</h6></a>
-                                            <h3 class="font-weight-bold">$50.000</h3>
-                                            <h6 class="text-success">50.50%</h6>
-                                          </div>
-                                      </div>
+                                    
+                                    
+
                                       
                                       
                                   </div>
@@ -133,29 +105,7 @@
                           
                       </div>
                   </section>
-                                  <section class="bg-grey">
-                                      <div class="container">
-                                          <div class="row">
-                                              <div class="col-lg-8 my-3">
-                                                  <div class="card rounded-0">
-                                                      <div class="card-header bg-light">
-                                                          <h6 class="font-weight-bold mb-0">Numero de Aprendices registrados</h6>
-                                                      </div>
-                                                      <div class="card-body">
-                                                          <canvas id="myChart"></canvas>
-                                                      </div>
-                                                      
-                                                  </div>
-                                              </div>
-                                              <div class="col-lg-4 my-3" >
-                                                   
-                                              </div>
-                                              
-                                          </div>
-                                             
-                                          
-                                      </div>
-                                  </section>
+                         
                   
               </div>
           </div>

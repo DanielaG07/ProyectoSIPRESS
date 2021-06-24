@@ -10,7 +10,7 @@
 
     <!-- Mi estilos CSS -->
     <link rel="stylesheet" href="micss/estilos.css">
-    <link rel="stylesheet" type="text/css" href="css2/formularioregister.css">
+    <link rel="stylesheet" type="text/css" href="">
     
  
 
@@ -55,12 +55,7 @@
                       <div class="carousel-item active">
                           <img src="images/img.jpg" class="d-block w-100" alt="..." width="660" height="600">
                       </div>
-                      <div class="carousel-item">
-                        <img src="images/img2.png" class="d-block w-100" alt="..." width="660" height="600">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/img1.jpg" class="d-block w-100" alt="..." width="660" height="600">
-                      </div>
+                     
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -86,12 +81,13 @@
                           <input type="email" class="form-control" name="txtcorreo" placeholder="Ingrese correo">
                       </div>
                       <div class="form-group mx-sm-4 pb-3">
-                          <input type="password" class="form-control" name="txtcontraseña" placeholder="Ingrese su Contraseña">
+                          <input type="password" class="form-control" name="txtcontrasena" placeholder="Ingrese su contraseña">
                       </div>
                       <div class="form-group mx-sm-4 pb-2">
                           <input type="submit" name="accion" class="btn btn-block Ingresar" value="Ingresar">
                       </div>
-                  </form> 
+                      
+           
                       <div class="form-group mx-sm-4 pt-2 pb-3 text-right">
                           <span class=""><a href="#" class="olvide">Olvide mi contraseña</a></span>
                       </div>
@@ -101,22 +97,23 @@
                       </div>
                </div>
           </div>
+      </form> 
                     <div id="openModal" class="modalDialog">
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
                         
-                     <form id="formulario" name="formulario" method="post" action="usuarios.jsp">
+                     <form id="formulario" name="formulario" method="post" action="nuevousuario"> 
                         <h4>Formulario de Registro</h4>
-                            <label for="nombre"><input name="nombre" class="controls" type="text" placeholder="Nombre completo" size= "30" max="12" />
+                            <label for="nombre"><input name="Nombre" class="controls" type="text" placeholder="Nombre completo" size= "30" max="12" />
                         </label><br>
-                            <label for="correo"><input name="correo" class="controls" type="email" id="correo" placeholder="Ingrese correo" size="30" max="12"/>
+                            <label for="correo"><input name="Correo" class="controls" type="email" id="correo" placeholder="Ingrese correo" size="30" max="12"/>
                             </label><br>
-                            <label for="contraseña"><input class="controls" id="contraseña" type="password" id="contraseña" placeholder="Ingrese contraseña" size="30" max="12"/></label><br>
-                            <label for="telefono"><input name="telefono" class="controls" type="text" pattern="[0-9]+" placeholder="Numero Movil" size= "30" max="12" />
+                            <label for="contraseña"><input class="controls"  name="Contrasena" id="Contrasena"  type="password"  placeholder="Ingrese contraseña" size="30" max="12"/></label><br>
+                            <label for="telefono"><input name="Telefono" class="controls" type="text" pattern="[0-9]+" placeholder="Numero Movil" size= "30" max="12" />
                       </label><br>
 
                       <p>     
-                          <select class="usuario" name="usuario">   
+                            <select class="usuario" name="Tusuario">   
                             <option>Tipo de Usuario</option>
                             <option value="Docente">Docente</option>
                             <option value="Aprendiz">Aprendiz</option>
@@ -125,16 +122,20 @@
                       <p>      
                         <select name="ciudad" class="ciudad">
                           <option placeholder="">Seleccione ciudad</option>
-                          <option value="Medellin">Medellín</option>
-                            <option value="Bogotá">Bogotá</option>
-                            <option value="Barranquilla">Barranquilla</option>
-                            <option value="Cali">Cali</option>
+                          <option value="medellin">Medellín</option>
+                            <option value="bogota">Bogotá</option>
+                            <option value="barranquilla">Barranquilla</option>
+                            <option value="cali">Cali</option>
                           </select>
                       </p>
+                      
                     <p><input type="checkbox" name="terminos" > Estoy de acurdo con <a href="">terminos y condiciones</a></p>
-                    <input type="submit" class="botons" name="btn" value="Registrarse">
-                     
-
+                    <input type="submit" class="botons"  name="" value="Registrarse">
++                    </form> 
+                    </div>
+                    </div> 
+                        
+                        
                   <script type="text/javascript">
                   (function(){
                     var formulario= document.getElementsByName("formulario")[0];
@@ -201,5 +202,5 @@
    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.min.js"></script> 
-    </body>
+    </body> 
 </html>

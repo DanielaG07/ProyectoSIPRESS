@@ -1,4 +1,4 @@
-
+ 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -50,6 +50,11 @@
                             </div>
                             
                             <div class="mb-3">
+                              <input type="file" class="form-control"  aria-label="file example" required>
+                              <div class="invalid-feedback">Example invalid form file feedback</div>
+                            </div>
+                            
+                             <div class="mb-3">
                               <input type="file" class="form-control"  aria-label="file example" required>
                               <div class="invalid-feedback">Example invalid form file feedback</div>
                             </div>

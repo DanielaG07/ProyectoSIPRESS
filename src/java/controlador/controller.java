@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+
 import Modelo.Persona;
 import Modelo.PersonaDAO;
 import java.io.IOException;
@@ -20,35 +21,34 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "controller", urlPatterns = {"/controller"})
 public class controller extends HttpServlet {
-PersonaDAO dao=new PersonaDAO();
-    Persona p=new Persona ();
+    PersonaDAO dao=new PersonaDAO();
+    Persona p=new Persona ("","");
     int r;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-
         throws ServletException, IOException {
-        System.out.println("Holam");
+        
         response.setContentType("text/html;charset=UTF-8");
         String accion =request.getParameter("accion");
+        
         if (accion.equals("Ingresar")){
             String correo=request.getParameter("txtcorreo");  
-            
-            String contraseña=request.getParameter("txtcontraseña"); 
+            String contraseña=request.getParameter("txtcontrasena"); 
             p.setCorreo(correo);
             p.setContraseña(contraseña);
             r=dao.Validar(p);
-             if(r==1){
+             if(r==2){
+                 request.getSession().setAttribute("correo", correo);
+                 request.getRequestDispatcher("usuarioAprendiz.jsp").forward(request, response);
+             }else if (r==3){
                  request.getSession().setAttribute("correo", correo);
                  request.getRequestDispatcher("usuario.jsp").forward(request, response);
              }else{
                  request.getRequestDispatcher("index.jsp").forward(request, response);
              }
-     
-        }else{
-    
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+       
         }
-    }
+         }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -63,8 +63,8 @@ PersonaDAO dao=new PersonaDAO();
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-    }
-
+     }
+          
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -90,3 +90,5 @@ PersonaDAO dao=new PersonaDAO();
     }// </editor-fold>
 
 }
+
+
