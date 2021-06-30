@@ -4,6 +4,7 @@ package Modelo;
 
 public class Persona {
 
+    
     String correo;
     String contraseña;
 

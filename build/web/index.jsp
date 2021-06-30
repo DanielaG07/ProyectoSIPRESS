@@ -19,8 +19,8 @@
   
       <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <div class="container-fluid">
-            <img src="images/logo1.jpg " class="navbar-bran">
+            <div class="container-fluid" style="color: #f1f1f1" >
+              <a class="nav-link active"><strong>SIPRESS</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,14 +29,12 @@
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Sobre Nosotros</a>
                 </li>
+                
                 <li class="nav-item">
                   <a class="nav-link" href="http://localhost:8080/pbootstrap/contacto.jsp">Contactenos</a>
                 </li>
               </ul>
-              <form class="d-flex"> 
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+             
             </div>
           </div>
         </nav>
@@ -83,9 +81,11 @@
                       <div class="form-group mx-sm-4 pb-3">
                           <input type="password" class="form-control" name="txtcontrasena" placeholder="Ingrese su contraseña">
                       </div>
-                      <div class="form-group mx-sm-4 pb-2">
+                      <div class="form-group mx-sm-4 pb-2" >
+                          <div style="background-color: whitesmoke" >
                           <input type="submit" name="accion" class="btn btn-block Ingresar" value="Ingresar">
                       </div>
+                          </div>
                       
            
                       <div class="form-group mx-sm-4 pt-2 pb-3 text-right">
@@ -102,7 +102,7 @@
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
                         
-                     <form id="formulario" name="formulario" method="post" action="nuevousuario"> 
+                     <form id="formulario" name="formulario" method="" action="registeruser"> 
                         <h4>Formulario de Registro</h4>
                             <label for="nombre"><input name="Nombre" class="controls" type="text" placeholder="Nombre completo" size= "30" max="12" />
                         </label><br>
@@ -131,7 +131,7 @@
                       
                     <p><input type="checkbox" name="terminos" > Estoy de acurdo con <a href="">terminos y condiciones</a></p>
                     <input type="submit" class="botons"  name="" value="Registrarse">
-+                    </form> 
+                    </form> 
                     </div>
                     </div> 
                         
@@ -140,7 +140,7 @@
                   (function(){
                     var formulario= document.getElementsByName("formulario")[0];
                     var elementos = formulario.elements;
-                    var boton = document.getElementsByName("Registrar");
+                    var boton = document.getElementsByName("Registrarse");
 
                     var validarNombre=function(e){
                       if (formulario.nombre.value == 0){
@@ -186,20 +186,20 @@
                     }())
 
                   </script>
-                    </div>
-                    </div>
-      </
+           
+              <footer class="text-center text-white" style="background-color: #f1f1f1;">
+            
+              <!-- Grid container -->
 
-             
-      
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
+              <!-- Copyright -->
+              <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); height: 40px;">
+                ? 2020 Copyright:
+                <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+              </div>
+              <!-- Copyright -->
+            </footer>
    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.min.js"></script> 
     </body> 

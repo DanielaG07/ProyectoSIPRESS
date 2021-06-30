@@ -1,9 +1,7 @@
 
 body{
         overflow: visible
-
 }
-
 
 .navbar-bran{
 	height: 60px;
@@ -38,7 +36,7 @@ body{
   width: 100%;
   }
 .ingresar{
-    background: #222A3F;
+    background: white;
     padding: 10px;
     font-size: 16px;
     font-weight: 700!important;

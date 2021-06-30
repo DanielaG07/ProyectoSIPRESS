@@ -1,3 +1,8 @@
+<%@page import="java.util.Iterator"%>
+<%@page import="Modelo.Actividad"%>
+<%@page import="java.util.List"%>
+<%@page import="Modelo.ActividadDAO"%>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,6 +18,8 @@
     <link rel="stylesheet" href="micss/usuarios.css">
     
     
+    
+    
     <title>Hello, world!</title>
   </head>
   <body>
@@ -22,22 +29,21 @@
                   <h4 class="text-light font-weight-bold">SIPRESS</h4>
               </div>
               <div class="menu">
-                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-apps mr-2 lead"></i>Tablero</a> 
-                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-people mr-2 lead"></i>Usuarios</a>
+                  
                   <a href="http://localhost:8080/pbootstrap/Proceso.jsp" class="d-block text-light p-3"><i class="icon ion-md-stats mr-2 lead"></i>Mi proceso</a>
-                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-calendar mr-2 lead"></i>Calendario</a>
+                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-apps mr-2 lead"></i>Agenda</a> 
+                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-people mr-2 lead"></i>Usuarios</a>
+                  <a href="http://localhost:8080/pbootstrap/Calendario.jsp" class="d-block text-light p-3"><i class="icon ion-md-calendar mr-2 lead"></i>Calendario</a>
                   <a href="#" class="d-block text-light p-3"><i class="icon ion-md-settings mr-2 lead"></i>Configuración</a>
               </div>
           </div>
           <div class="w-100">
               <nav class="navbar navbar-dark bg-dark border-bottom">
-                  <button type="button" class="btn btn-primary">
-                        Notifications <span class="badge bg-secondary">4</span>
-                  </button>
+                
                   <a style="color:white" ><span></span></a>
-                  <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                          DANIELA GUTIERREZ
+                  <div class="dropdown" style="right: 90px;">
+                        <a  href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" class="icon ion-md-people mr-2 lead">
+                         
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                           <li><a class="dropdown-item" href="#">Calendario</a></li
@@ -109,16 +115,27 @@
                                           
                                       </div>
                                   </section>
-                                  <section>  
-                  <div class="container">
+                                  
+                             
                       
+                                  
+                <section>  
+                  <div class="container">
                             <div class="row row-cols-1 row-cols-md-2 g-4">
+                                  <%
+                                    ActividadDAO dao=new ActividadDAO();
+                                    List<Actividad>list=dao.listar();
+                                    Iterator<Actividad>iter=list.iterator();
+                                    Actividad actividad=null;
+                                    while(iter.hasNext()){
+                                        actividad=iter.next();
+                                  %>
                                 <div class="col">
                                   <div class="card">
                                       <img src="images/img3.jpg"  class="card-img-top" alt="...">
                                     <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>                                      
+                                      <h5 class="card-title"><%= actividad.getNombre()%></h5>
+                                      <p class="card-text"><%= actividad.getDescripcion()%></p>                                      
                                       
                                         <!-- Button trigger modal -->
                                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -146,118 +163,12 @@
                                                     </div>
                                                   </div>
                                                 </div>
-                                                
-                                              
-                                      
                                       <a href="#" class="btn btn-primary"> Detalles</a>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col">
-                                  <div class="card">
-                                    <img src="images/img3.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                  Aplicar
-                                                </button>
-
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                  <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                      <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Importante</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                      </div>
-                                                      <div class="modal-body">
-                                                        El plan de estudios del establecimiento educativo programa una intensidad mínima de ochenta (80) horas de prestación del servicio social estudiantil obligatorio en un proyecto pedagógico, durante el tiempo de formación en los grados 100.
-                                                        Leer muy bien el documento de Detalles.
-                                                      </div>
-                                                      <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                        <button type="button" class="btn btn-primary"  onclick="alert('¡Felicidades! has aplicado correctamente, en maximo dos días habiles recibiras un correo de respuesta');">Continuar</button>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-
-                                      <a href="#" class="btn btn-primary">Detalles</a>                                    
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card">
-                                    <img src="images/img3.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                                      <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                  Aplicar
-                                                </button>
-
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                  <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                      <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Importante</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                      </div>
-                                                      <div class="modal-body">
-                                                        El plan de estudios del establecimiento educativo programa una intensidad mínima de ochenta (80) horas de prestación del servicio social estudiantil obligatorio en un proyecto pedagógico, durante el tiempo de formación en los grados 100.
-                                                        Leer muy bien el documento de Detalles.
-                                                      </div>
-                                                      <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                        <button type="button" class="btn btn-primary"  onclick="alert('¡Felicidades! has aplicado correctamente, en maximo dos días habiles recibiras un correo de respuesta');">Continuar</button>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-
-                                      <a href="#" class="btn btn-primary">Detalles</a>                                   
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card">
-                                    <img src="images/img3.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                      <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                  Aplicar
-                                                </button>
-
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                  <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                      <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Importante</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                      </div>
-                                                      <div class="modal-body">
-                                                        El plan de estudios del establecimiento educativo programa una intensidad mínima de ochenta (80) horas de prestación del servicio social estudiantil obligatorio en un proyecto pedagógico, durante el tiempo de formación en los grados 100.
-                                                        Leer muy bien el documento de Detalles.
-                                                      </div>
-                                                      <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                        <button type="button" class="btn btn-primary"  onclick="alert('¡Felicidades! has aplicado correctamente, en maximo dos días habiles recibiras un correo de respuesta');">Continuar</button>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-
-                                      <a href="#" class="btn btn-primary">Detalles</a>                                   
-                                    </div>
-                                  </div>
-                                </div>
+                                <%}%>
+                           
                               </div>
                         </div>
                    </section>
@@ -266,7 +177,17 @@
           </div>
       </div>
       
-      
+       <footer class="text-center text-white" style="background-color: #f1f1f1;">
+            
+              <!-- Grid container -->
+
+              <!-- Copyright -->
+              <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); height: 40px;">
+                © 2020:
+                <a class="text-dark" href="https://mdbootstrap.com/">SIPRESS</a>
+              </div>
+              <!-- Copyright -->
+            </footer>
  
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -278,22 +199,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js" integrity="sha256-qoN08nWXsFH+S9CtIq99e5yzYHioRHtNB9t2qy1MSmc=" crossorigin="anonymous"></script>
-  
-          <script>
-              var ctx = document.getElementById('myChart').getContext('2d');
-              var Chart = new Chart(ctx, {
-                  type: 'line',
-                  data: {
-                      lebels: ['Jenuary', '', '', 'February', 'March', 'April', 'May', 'June'. 'July'],
-                      datasets:[{
-                              lebel: 'my firts datasets',
-                              backgroundColor: 'rgb(255, 99, 123)',
-                              borderColor: 'rgb(255, 99, 123)',
-                              data: [0, 10, 5, 2, 2o, 30, 45]
-                      }]
-                  },
-                  options:{}
-              });
-         </script>
+
   </body>
 </html>

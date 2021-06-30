@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,7 +27,7 @@
                   <a href="http://localhost:8080/pbootstrap/actividades.jsp" class="d-block text-light p-3"><i class="icon ion-md-apps mr-2 lead"></i>Tareas activas</a> 
                   <a href="#" class="d-block text-light p-3"><i class="icon ion-md-people mr-2 lead"></i>Usuarios Activos</a>
                   <a href="#" class="d-block text-light p-3"><i class="icon ion-md-stats mr-2 lead"></i>Estadisticas</a>
-                  <a href="#" class="d-block text-light p-3"><i class="icon ion-md-calendar mr-2 lead"></i>Calendario</a>
+                  <a href="http://localhost:8080/pbootstrap/Calendario.jsp" class="d-block text-light p-3"><i class="icon ion-md-calendar mr-2 lead"></i>Calendario</a>
                   <a href="#" class="d-block text-light p-3"><i class="icon ion-md-settings mr-2 lead"></i>Configuración de cuenta</a>
               </div>
           </div>
@@ -33,10 +35,8 @@
               <nav class="navbar navbar-dark bg-dark border-bottom">
                  
                   <a style="color:white" ><span></span></a>
-                  <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                          DANIELA GUTIERREZ
-                        </a>
+                  <div class="dropdown" style="right: 90px;">
+                        <a  href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" class="icon ion-md-people mr-2 lead"></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                           <li><a class="dropdown-item" href="index.jsp">Calendario</a></li
                           <li><a class="dropdown-item" href="index.jsp">Salir</a></li>
@@ -79,7 +79,7 @@
                       <div class="container">
                           <div class="row">
                               <div class="col-lg-9">
-                                  <h1 class="font-weight-bold mb-0">Bienvenida... <strong>${Correo} </strong></h1>
+                                  <h1 class="font-weight-bold mb-0">Bienvenid@ <strong>${Correo} </strong></h1>
                                   <p class="lead text-muted">Revisa la información</p>
                               </div>
                               <div class="col-lg-3 d-flex">
@@ -89,36 +89,16 @@
                           </div>
                       </div>
                   </section>
-                  <section class="bg-mix">
-                      <div class="container">
-                          <div class="card rounded-0">
-                              <div class="card-body">
-                                  <div class="row">
-                                    
-                                    
-
-                                      
-                                      
-                                  </div>
-                              </div>
-                          </div>
-                          
-                      </div>
-                  </section>
-                         
-                  
+               
               </div>
           </div>
       </div>
       
       
- 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
--->
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
+               
+    
+      
+        
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>

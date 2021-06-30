@@ -71,6 +71,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
            <link rel="stylesheet" href="micss/usuarios.css">
            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
            <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> 
@@ -87,19 +88,10 @@
                      <link href="">
                      
                      <button type="button" class="btn btn-primary">
-                           Notifications <span class="badge bg-secondary">4</span>
+                           Sobre nosotros <span class="badge bg-secondary"></span>
                      </button>
                      <a style="color:white" ><span></span></a>
-                     <div class="dropdown">
-                           <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                             DANIELA GUTIERREZ
-                           </a>
-                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                             <li><a class="dropdown-item" href="#">Action</a></li>
-                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                             <li><a class="dropdown-item" href="index.jsp">Salir</a></li>
-                           </ul>
-                         </div>
+                   
                  </nav>    
     </div>
         
@@ -162,37 +154,7 @@
   
         
         
-            <div id="buttons">
-              <div class="facebook button">
-                <i class="icon">
-                  <i class="fa fa-facebook">
-                </i>
-              </i>
-              <div class="slide">
-                <p>
-                  facebook
-                </p>
-              </div>
-              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Freference%2Fplugins%2Flike&send=false&layout=button_count&width=80&show_faces=false&font&colorscheme=light&action=like&height=20&appId=568581339861351" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:20px;" allowTransparency="true">
-              </iframe>
-              </div>
-
-              
-
-              <div class="google button">
-                <i class="icon">
-                  <i class="fa fa-google-plus">
-                </i>
-              </i>
-              <div class="slide">
-                <p>
-                  google+
-                </p>
-              </div>
-              <!-- Place this tag where you want the +1 button to render. -->
-              <div class="g-plusone" data-size="medium">
-              </div>
-
+           
               <!-- Place this tag after the last +1 button tag. -->
               <script type="text/javascript">
                 (function() {
@@ -207,6 +169,18 @@
               </script>
               </div>
             </div>
+        
+             <footer class="text-center text-white" style="background-color: #f1f1f1;">
+            
+              <!-- Grid container -->
+
+              <!-- Copyright -->
+              <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2); height: 40px;">
+                ? 2020 Copyright:
+                <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+              </div>
+              <!-- Copyright -->
+            </footer>
 
 
        
